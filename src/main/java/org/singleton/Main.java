@@ -1,4 +1,4 @@
-package org.main;
+package org.singleton;
 
 import org.singleton.Singleton;
 
