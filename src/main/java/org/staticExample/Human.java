@@ -20,6 +20,10 @@ public class Human {
         Human.population+=1;
     }
 
+    public static void display(){
+        System.out.println("Displaying");
+    }
+
 
     public static void main(String[] args) {
         Human yugesh=new Human(26,"yugesh",70000,false);
