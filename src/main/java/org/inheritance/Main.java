@@ -8,6 +8,9 @@ public class Main {
         BoxWeight boxWeight=new BoxWeight(20);
         System.out.println("Box length:"+boxWeight.length+" boxWeight height:"+boxWeight.height+" box width:"+box.width
         +" box weight:"+boxWeight.weight);
+
+        BoxWeight w=new BoxWeight(boxWeight);
+    
     }
     
 }
