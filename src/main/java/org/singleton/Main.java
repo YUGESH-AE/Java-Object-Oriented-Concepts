@@ -1,6 +1,5 @@
 package org.singleton;
 
-import org.singleton.Singleton;
 
 public class Main {
     public static void main(String[] args) {
