@@ -4,23 +4,25 @@ public class BoxWeight extends Box {
 
     double weight;
 
-    public BoxWeight(){
+    public BoxWeight() {
         super();
-        this.weight=-1;
+        this.weight = -1;
     }
+
     public BoxWeight(double length, double height, double width, double weight) {
         super(length, height, width);
         this.weight = weight;
     }
-    public BoxWeight(double sides){
+
+    public BoxWeight(double sides) {
         super(sides);
-        this.weight=sides;
+        this.weight = sides;
     }
 
-    public BoxWeight(BoxWeight boxWeight){
+    public BoxWeight(BoxWeight boxWeight) {
         super(boxWeight);
-        this.weight=boxWeight.weight;
+        this.weight = boxWeight.weight;
     }
-    
-    
+
+
 }

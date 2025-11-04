@@ -1,7 +1,7 @@
 package org.inheritance;
 
 public class Box {
-    
+
     double length;
     double height;
     double width;
@@ -12,26 +12,26 @@ public class Box {
         this.width = width;
     }
 
-    Box(){
-        this.length=-1;
-        this.width=-1;
-        this.height=-1;
+    Box() {
+        this.length = -1;
+        this.width = -1;
+        this.height = -1;
     }
 
-    Box(double side){
-        this.width=side;
-        this.height=side;
-        this.length=side;
+    Box(double side) {
+        this.width = side;
+        this.height = side;
+        this.length = side;
 
     }
 
-    Box(Box old){
-        this.width=old.width;
-        this.height=old.height;
-        this.length=old.length; 
+    Box(Box old) {
+        this.width = old.width;
+        this.height = old.height;
+        this.length = old.length;
     }
 
-    public void information(){
+    public void information() {
         System.out.println("Running the box");
     }
 }
