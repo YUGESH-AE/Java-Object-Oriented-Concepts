@@ -1,10 +1,10 @@
-package org.Strings_StringBuilder;
+package com.yugesh.Strings_StringBuilder;
 
 public class Main {
     
     public static void main(String[] args) {
-        String str="yugesh";
-    String str2="yugesh";
+        String str= "com/yugesh";
+    String str2= "com/yugesh";
 
     System.out.println(str==str2); // truel̥
 

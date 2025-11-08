@@ -1,4 +1,4 @@
-package org.Strings_StringBuilder;
+package com.yugesh.Strings_StringBuilder;
 
 public class StringAndStringBuilderPerformance {
     

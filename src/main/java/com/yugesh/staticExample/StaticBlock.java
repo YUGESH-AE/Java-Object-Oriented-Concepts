@@ -1,4 +1,4 @@
-package org.staticExample;
+package com.yugesh.staticExample;
 
 public class StaticBlock {
 

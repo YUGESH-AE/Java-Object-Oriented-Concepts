@@ -1,4 +1,4 @@
-package org.featuresOfJava_8;
+package com.yugesh.featuresOfJava_8;
 
 public class Interface_Java_8 implements MyInterface {
     

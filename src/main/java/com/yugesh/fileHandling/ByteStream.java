@@ -1,23 +1,24 @@
-package org.fileHandling;
+package com.yugesh.fileHandling;
 
-import java.io.FileReader;
-import java.io.FileWriter;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 
-public class CharacterStream {
-
+public class ByteStream {
     public static void main(String[] args) {
+
         String filePath = "C://Users//aeyug//IdeaProjects//Java-Object-Oriented-Concepts//src//main//resources//file.txt";
         String message = "How are you";
         try (
-                FileWriter writer = new FileWriter(filePath);
-                FileReader reader = new FileReader(filePath);
+                FileOutputStream out = new FileOutputStream(filePath);
+                FileInputStream in = new FileInputStream(filePath);
         ) {
 
-            writer.write(message);
+            out.write(message.getBytes());
             int i;
-            while ((i = reader.read()) != -1) {
+            while ((i = in.read()) != -1) {
                 System.out.println((char) i);
             }
+
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

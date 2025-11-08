@@ -1,4 +1,4 @@
-package org.inheritance;
+package com.yugesh.inheritance;
 
 public class BoxWeight extends Box {
 

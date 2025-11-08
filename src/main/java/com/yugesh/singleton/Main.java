@@ -1,4 +1,4 @@
-package org.singleton;
+package com.yugesh.singleton;
 
 
 public class Main {
