@@ -1,4 +1,4 @@
-package com.yugesh.multithreading_cuncurrency;
+package com.yugesh.multithreading_cuncurrency.thread_basics;
 
 public class DaemonThread extends Thread{
 

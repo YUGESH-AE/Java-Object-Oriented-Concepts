@@ -1,4 +1,4 @@
-package com.yugesh.multithreading_cuncurrency;
+package com.yugesh.multithreading_cuncurrency.thread_basics;
 
 public class UserThread2_Runnable implements Runnable{
     @Override
