@@ -1,13 +1,12 @@
-package com.yugesh.multithreading_cuncurrency.volatile_example;
-
+package com.yugesh.multithreading_cuncurrency.threadsOnVariableExample.volatile_example;
 
 /*
  * use ctrl+c to stop the program execution
  */
 
-public class WithVolatileExample {
-    
-    private static volatile boolean running = true;
+public class WithoutVolatileExample {
+
+    private static boolean running = true;
 
     static void main() {
 
