@@ -29,12 +29,12 @@ public class ThreadTransitionDemo {
             Thread.sleep(2000);
 
             synchronized (lock) {
-                System.out.println("Main: Sending signal...");
+                System.out.println("ThreadLambda: Sending signal...");
                 lock.notify(); // wakes up worker
             }
 
             t1.join(); // main waits for worker to finish
-            System.out.println("Main: All done!"); // TERMINATED
+            System.out.println("ThreadLambda: All done!"); // TERMINATED
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

@@ -5,7 +5,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class SmartWayToRemoveDeadLock {
 
-    public static void main(String[] args) {
+    static void main() {
 
         try {
 
@@ -61,7 +61,7 @@ public class SmartWayToRemoveDeadLock {
 
             t1.join();
             t2.join();
-            System.out.println("Sucessfull both the threads acquired locks.");
+            System.out.println("Successful both the threads acquired locks.");
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
