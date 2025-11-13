@@ -7,11 +7,10 @@ public class FixedThreadPoolExample {
 
     public static void main(String[] args) {
 
-        try {
+        try (ExecutorService executorService = Executors.newFixedThreadPool(3)) {
             int noOfThread = Runtime.getRuntime().availableProcessors();
             System.out.println("No of Threads in the Machine is " + noOfThread);
 
-            ExecutorService executorService = Executors.newFixedThreadPool(3);
             for (int i = 0; i < 100; i++) {
                 int id = i;
                 executorService

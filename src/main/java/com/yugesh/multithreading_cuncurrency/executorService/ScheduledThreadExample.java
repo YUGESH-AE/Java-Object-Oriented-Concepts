@@ -8,9 +8,7 @@ public class ScheduledThreadExample {
 
     public static void main(String[] args) {
 
-        try {
-
-            ScheduledExecutorService service = Executors.newScheduledThreadPool(2);
+        try (ScheduledExecutorService service = Executors.newScheduledThreadPool(2)) {
 
             service.schedule(() -> System.out.println("This runs after 2 seconds"),
                     2,

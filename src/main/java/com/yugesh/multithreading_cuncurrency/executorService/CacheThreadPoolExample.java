@@ -6,13 +6,12 @@ import java.util.concurrent.Executors;
 public class CacheThreadPoolExample {
     
     public static void main(String[] args) {
-        
-        try {
+
+        try (ExecutorService executorService = Executors.newCachedThreadPool()) {
 
             int noOfThread = Runtime.getRuntime().availableProcessors();
             System.out.println("No of Threads in the Machine is " + noOfThread);
 
-            ExecutorService executorService = Executors.newCachedThreadPool();
             for (int i = 0; i < 100; i++) {
                 int id = i;
                 executorService

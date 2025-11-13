@@ -8,9 +8,7 @@ public class WorkStealingPoolExample {
 
     public static void main(String[] args) {
 
-        try {
-
-            ExecutorService executor = Executors.newWorkStealingPool();
+        try (ExecutorService executor = Executors.newWorkStealingPool()) {
 
             for (int i = 1; i <= 8; i++) {
                 int id = i;
