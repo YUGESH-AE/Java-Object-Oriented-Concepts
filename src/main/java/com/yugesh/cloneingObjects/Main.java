@@ -7,7 +7,7 @@ public class Main {
         /*
         Insted of passing the object we can use the clonable interface
          */
-//        Human twin=new Human(yugesh);
+       Human twin2=new Human(yugesh);
         Human twin=yugesh.clone();
         System.out.println(twin);
     }
