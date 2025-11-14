@@ -5,7 +5,7 @@ import java.util.concurrent.Executors;
 
 public class SingleThreadExecutorExample {
 
-    public static void main(String[] args) {
+    static void main() {
 
         try {
 

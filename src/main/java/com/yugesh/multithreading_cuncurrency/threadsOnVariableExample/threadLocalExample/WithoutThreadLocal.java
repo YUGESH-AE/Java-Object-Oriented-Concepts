@@ -4,7 +4,7 @@ public class WithoutThreadLocal {
 
     static int counter = 0;
 
-    public static void main(String[] args) {
+    static void main() {
 
         try {
 

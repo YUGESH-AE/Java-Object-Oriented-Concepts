@@ -7,7 +7,7 @@ import java.util.List;
 
 public class JavaNIO {
 
-    public static void main(String[] args) {
+    static void main() {
         try {
             ClassLoader classLoader = JavaNIO.class.getClassLoader();
 

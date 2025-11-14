@@ -2,7 +2,7 @@ package com.yugesh.inheritance;
 
 public class Main {
 
-    public static void main(String[] args) {
+    static void main() {
         Box box = new Box(20);
         System.out.println("Box length:" + box.length + " box height:" + box.height + " box width:" + box.width);
         BoxWeight boxWeight = new BoxWeight(20);

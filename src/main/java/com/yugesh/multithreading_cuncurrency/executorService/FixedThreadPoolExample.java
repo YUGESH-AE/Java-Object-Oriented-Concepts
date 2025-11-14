@@ -5,7 +5,7 @@ import java.util.concurrent.Executors;
 
 public class FixedThreadPoolExample {
 
-    public static void main(String[] args) {
+    static void main() {
 
         try {
             int noOfThread = Runtime.getRuntime().availableProcessors();

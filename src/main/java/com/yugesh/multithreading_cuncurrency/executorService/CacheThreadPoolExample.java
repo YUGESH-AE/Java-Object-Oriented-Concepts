@@ -4,10 +4,8 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class CacheThreadPoolExample {
-    
-    public static void main(String[] args) {
-        
-        try {
+
+    static void main() {        try {
 
             int noOfThread = Runtime.getRuntime().availableProcessors();
             System.out.println("No of Threads in the Machine is " + noOfThread);

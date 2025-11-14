@@ -1,8 +1,8 @@
 package com.yugesh.Strings_StringBuilder;
 
 public class Main {
-    
-    public static void main(String[] args) {
+
+    static void main() {
         String str= "com/yugesh";
     String str2= "com/yugesh";
 

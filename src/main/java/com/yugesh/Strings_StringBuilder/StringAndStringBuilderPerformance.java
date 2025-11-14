@@ -1,9 +1,8 @@
 package com.yugesh.Strings_StringBuilder;
 
 public class StringAndStringBuilderPerformance {
-    
 
-    public static void main(String[] args) {
+    static void main() {
         int n = 100_000;
 
         // --- Using String ---

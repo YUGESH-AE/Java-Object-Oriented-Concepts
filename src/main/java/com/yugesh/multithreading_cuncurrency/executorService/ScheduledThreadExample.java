@@ -6,7 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 public class ScheduledThreadExample {
 
-    public static void main(String[] args) {
+    static void main() {
 
         try {
 

@@ -16,7 +16,8 @@ public class StaticBlock {
      i.e when the class is loaded for the very first time.
 
      */
-    public static void main(String[] args) {
+
+    static void main() {
         StaticBlock obj1 = new StaticBlock();
         System.out.println(StaticBlock.a + " " + StaticBlock.b);
 

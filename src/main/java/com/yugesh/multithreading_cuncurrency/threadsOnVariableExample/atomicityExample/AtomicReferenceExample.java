@@ -13,7 +13,7 @@ public class AtomicReferenceExample {
         }
     }
 
-    public static void main(String[] args) {
+    static void main() {
         
         AtomicReference<User> ref = new AtomicReference<>(new User("Alice"));
         User oldUser = ref.get();

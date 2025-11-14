@@ -23,8 +23,7 @@ public class Human {
         System.out.println("Displaying");
     }
 
-
-    public static void main(String[] args) {
+    static void main() {
         Human yugesh = new Human(26, "com/yugesh", 70000, false);
         Human ram = new Human(26, "Ram", 70000, false);
         System.out.println(yugesh.population);

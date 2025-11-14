@@ -5,7 +5,7 @@ import java.io.FileWriter;
 
 public class CharacterStream {
 
-    public static void main(String[] args) {
+    static void main() {
         String filePath = "C://Users//aeyug//IdeaProjects//Java-Object-Oriented-Concepts//src//main//resources//file.txt";
         String message = "How are you";
         try (

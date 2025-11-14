@@ -4,7 +4,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 
 public class ByteStream {
-    public static void main(String[] args) {
+    static void main() {
 
         String filePath = "C://Users//aeyug//IdeaProjects//Java-Object-Oriented-Concepts//src//main//resources//file.txt";
         String message = "How are you";

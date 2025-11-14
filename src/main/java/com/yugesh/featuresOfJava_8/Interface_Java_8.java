@@ -7,7 +7,7 @@ public class Interface_Java_8 implements MyInterface {
         System.out.println("Overriding the default method in the implementing class.");
     }
 
-    public static void main(String[] args) {
+    static void main() {
         Interface_Java_8 obj = new Interface_Java_8();
         obj.defaultMethod(); // Calls the overridden default method
 

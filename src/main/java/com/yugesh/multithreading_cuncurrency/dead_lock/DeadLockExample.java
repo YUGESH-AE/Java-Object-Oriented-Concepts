@@ -2,7 +2,7 @@ package com.yugesh.multithreading_cuncurrency.dead_lock;
 
 public class DeadLockExample {
 
-    public static void main(String[] args) {
+    static void main() {
         
         try {
             

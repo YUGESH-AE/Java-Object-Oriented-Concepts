@@ -8,7 +8,7 @@ public class ThreadLocalDateExample {
     static ThreadLocal<SimpleDateFormat> dateFormatter = ThreadLocal.withInitial(
             () -> new SimpleDateFormat("yyyy-MM-dd"));
 
-    public static void main(String[] args) {
+    static void main() {
         try {
             Runnable task = () -> {
 
