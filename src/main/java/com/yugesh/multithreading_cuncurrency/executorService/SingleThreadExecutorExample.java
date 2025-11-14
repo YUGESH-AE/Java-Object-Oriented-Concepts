@@ -7,12 +7,11 @@ public class SingleThreadExecutorExample {
 
     static void main() {
 
-        try {
+        try (ExecutorService executorService = Executors.newSingleThreadExecutor()) {
 
             int noOfThread = Runtime.getRuntime().availableProcessors();
             System.out.println("No of Threads in the Machine is " + noOfThread);
 
-            ExecutorService executorService = Executors.newSingleThreadExecutor();
             for (int i = 0; i < 100; i++) {
                 int id = i;
                 executorService
