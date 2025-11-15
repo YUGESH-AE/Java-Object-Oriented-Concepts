@@ -1,13 +1,15 @@
 package com.yugesh.multithreading_cuncurrency.completableFuture;
 
-import java.util.concurrent.*;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class CompletableFutureExample {
 
      static void main() {
 
-        ExecutorService executor = Executors.newCachedThreadPool();
-        try{
+
+         try (ExecutorService executor = Executors.newCachedThreadPool()) {
 
             // 1️⃣ supplyAsync() → returns a value
             CompletableFuture<Integer> task1 = CompletableFuture.supplyAsync(() -> {

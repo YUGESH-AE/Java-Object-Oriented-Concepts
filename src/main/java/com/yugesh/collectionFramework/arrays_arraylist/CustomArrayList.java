@@ -1,4 +1,4 @@
-package com.yugesh.arrays_arraylist;
+package com.yugesh.collectionFramework.arrays_arraylist;
 
 import java.util.Arrays;
 

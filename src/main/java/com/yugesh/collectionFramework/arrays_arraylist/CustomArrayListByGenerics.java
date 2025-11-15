@@ -1,17 +1,17 @@
-package com.yugesh.arrays_arraylist;
+package com.yugesh.collectionFramework.arrays_arraylist;
 
 import java.util.Arrays;
 
 public class CustomArrayListByGenerics<T>{
 
-    private Object[] data;
+    private T[] data;
 
     private static int DEFAULT_SIZE=10;
 
     private int size=0;
 
     public CustomArrayListByGenerics(){
-        this.data= new Object[DEFAULT_SIZE];
+        this.data = (T[]) new Object[DEFAULT_SIZE];
     }
 
     public void add(T num){
@@ -21,12 +21,11 @@ public class CustomArrayListByGenerics<T>{
         data[size++]=num;
     }
 
-    private void resize() {
-        Object[]temp=new Object[data.length*2];
-        for(int i=0;i<data.length;i++){
-            temp[i]=data[i];
-        }
-        data=temp;
+    static void main(){
+        CustomArrayListByGenerics<Integer> list = new CustomArrayListByGenerics<Integer>();
+        list.add(10);
+        list.add(20);
+        System.out.println(list);
     }
 
     private boolean isFull() {
@@ -58,10 +57,11 @@ public class CustomArrayListByGenerics<T>{
                 '}';
     }
 
-    static void main(){
-        CustomArrayListByGenerics<Integer>list=new CustomArrayListByGenerics<>();
-        list.add(10);
-        list.add(20);
-        System.out.println(list);
+    private void resize() {
+        T[] temp = (T[]) new Object[data.length * 2];
+        for(int i=0;i<data.length;i++){
+            temp[i]=data[i];
+        }
+        data=temp;
     }
 }
