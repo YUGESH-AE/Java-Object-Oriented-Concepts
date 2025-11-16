@@ -4,9 +4,9 @@ import java.util.Stack;
 
 public class StackExample {
 
-    static void main(){
+    static void main() {
 
-        Stack<String>stack=new Stack<>();
+        Stack<String> stack = new Stack<>();
 
         //push elements
         stack.push("A");
@@ -24,6 +24,6 @@ public class StackExample {
         System.out.println(stack);
 
         //search the element in the stack
-        System.out.println("Position of A:"+stack.search("A"));
+        System.out.println("Position of A:" + stack.search("A"));
     }
 }

@@ -4,14 +4,6 @@ public class WithoutSynchronization {
 
     int counrter = 0;
 
-    void incrementCounter() {
-        counrter++;
-    }
-
-    public String toString() {
-        return "Final counter value :" + counrter;
-    }
-
     static void main() {
 
         try {
@@ -38,6 +30,14 @@ public class WithoutSynchronization {
             System.out.println(e.getMessage());
         }
 
+    }
+
+    void incrementCounter() {
+        counrter++;
+    }
+
+    public String toString() {
+        return "Final counter value :" + counrter;
     }
 
 }

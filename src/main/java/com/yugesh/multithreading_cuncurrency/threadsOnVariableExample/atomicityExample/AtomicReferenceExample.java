@@ -4,17 +4,8 @@ import java.util.concurrent.atomic.AtomicReference;
 
 public class AtomicReferenceExample {
 
-    public static class User{
-
-        String name;
-
-        public User(String name) {
-            this.name = name;
-        }
-    }
-
     static void main() {
-        
+
         AtomicReference<User> ref = new AtomicReference<>(new User("Alice"));
         User oldUser = ref.get();
 
@@ -23,5 +14,14 @@ public class AtomicReferenceExample {
 
         System.out.println("Updated: " + updated + ", Current User: " + ref.get().name);
     }
-    
+
+    public static class User {
+
+        String name;
+
+        public User(String name) {
+            this.name = name;
+        }
+    }
+
 }

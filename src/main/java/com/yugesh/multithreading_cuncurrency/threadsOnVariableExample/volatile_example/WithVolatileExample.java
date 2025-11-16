@@ -6,7 +6,7 @@ package com.yugesh.multithreading_cuncurrency.threadsOnVariableExample.volatile_
  */
 
 public class WithVolatileExample {
-    
+
     private static volatile boolean running = true;
 
     static void main() {

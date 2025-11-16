@@ -1,11 +1,13 @@
 # Java-Object-Oriented-Concepts
+
 It is About OOPS in JAVA
 
 ## Requirements
 
 - JDK: Java 21 (LTS)
 
-This project is built and tested with Java 21. If your environment uses a different JDK, set JAVA_HOME to a Java 21 installation before running Maven. Example (bash):
+This project is built and tested with Java 21. If your environment uses a different JDK, set JAVA_HOME to a Java 21
+installation before running Maven. Example (bash):
 
 ```bash
 # temporarily for the current terminal session

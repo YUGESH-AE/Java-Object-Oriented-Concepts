@@ -1,6 +1,8 @@
 package com.yugesh.collectionFramework.setInterface;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Iterator;
 
 public class HashSetExample {
     public static void main(String[] args) {

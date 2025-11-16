@@ -1,6 +1,6 @@
 package com.yugesh.objectComparison;
 
-public class Student implements Comparable<Student>{
+public class Student implements Comparable<Student> {
 
     int rollNo;
 
@@ -13,6 +13,6 @@ public class Student implements Comparable<Student>{
 
     @Override
     public int compareTo(Student o) {
-        return (int) (this.marks-o.marks);
+        return (int) (this.marks - o.marks);
     }
 }

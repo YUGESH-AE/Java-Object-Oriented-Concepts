@@ -17,7 +17,7 @@ public class ScheduledThreadExample {
             service.scheduleAtFixedRate(() -> System.out.println("Repeats every 3 seconds"),
                     1, 3, TimeUnit.SECONDS);
 
-                    // service.shutdown();
+            // service.shutdown();
 
 
         } catch (Exception e) {

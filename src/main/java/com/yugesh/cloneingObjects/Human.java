@@ -7,7 +7,7 @@ import lombok.ToString;
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
-public class Human implements Cloneable{
+public class Human implements Cloneable {
 
     String name;
     int age;

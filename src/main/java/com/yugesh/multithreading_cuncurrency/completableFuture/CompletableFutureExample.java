@@ -6,10 +6,10 @@ import java.util.concurrent.Executors;
 
 public class CompletableFutureExample {
 
-     static void main() {
+    static void main() {
 
 
-         try (ExecutorService executor = Executors.newCachedThreadPool()) {
+        try (ExecutorService executor = Executors.newCachedThreadPool()) {
 
             // 1️⃣ supplyAsync() → returns a value
             CompletableFuture<Integer> task1 = CompletableFuture.supplyAsync(() -> {
@@ -44,7 +44,7 @@ public class CompletableFutureExample {
 
 
             // 5️⃣ thenRun() → run something after previous task (no input/output)
-            task3.thenRun(()->System.out.println("Task 3 Completed"));
+            task3.thenRun(() -> System.out.println("Task 3 Completed"));
 
 
             // 6️⃣ Combine two futures
@@ -58,9 +58,9 @@ public class CompletableFutureExample {
                 return 30;
             }, executor);
 
-            CompletableFuture<Integer> combined=task3.thenCombine(task4, Integer::sum);
+            CompletableFuture<Integer> combined = task3.thenCombine(task4, Integer::sum);
 
-            System.out.println("Combined Result: "+combined.get());
+            System.out.println("Combined Result: " + combined.get());
 
             // 7️⃣ anyOf() → returns result of the first completed task
             CompletableFuture<Object> any = CompletableFuture.anyOf(
@@ -78,10 +78,10 @@ public class CompletableFutureExample {
 
             executor.shutdown();
 
-        }catch (Exception e) {
+        } catch (Exception e) {
             System.out.println(e.getMessage());
 
 
-    }
         }
+    }
 }

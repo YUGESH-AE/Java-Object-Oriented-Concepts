@@ -16,17 +16,6 @@ public class WithSynchronization {
     //     }
     // }
 
-     synchronized void incrementCounter() {
-        
-            counrter++;
-    }
-
-    
-
-    public String toString() {
-        return "Final counter value :" + counrter;
-    }
-
     static void main() {
 
         try {
@@ -35,7 +24,7 @@ public class WithSynchronization {
 
             Thread t1 = new Thread(() -> {
                 for (int i = 0; i < 1_000_000; i++) {
-                   c.incrementCounter();
+                    c.incrementCounter();
                 }
             });
             Thread t2 = new Thread(() -> {
@@ -53,5 +42,14 @@ public class WithSynchronization {
             System.out.println(e.getMessage());
         }
 
+    }
+
+    synchronized void incrementCounter() {
+
+        counrter++;
+    }
+
+    public String toString() {
+        return "Final counter value :" + counrter;
     }
 }

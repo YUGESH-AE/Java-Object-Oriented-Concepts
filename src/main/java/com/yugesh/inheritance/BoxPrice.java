@@ -1,16 +1,16 @@
 package com.yugesh.inheritance;
 
-public class BoxPrice  extends BoxWeight{
-    
+public class BoxPrice extends BoxWeight {
+
     double cost;
 
-    public BoxPrice(){
+    public BoxPrice() {
         super();
-        this.cost=-1;
+        this.cost = -1;
     }
 
-    public BoxPrice(BoxPrice boxPrice){
+    public BoxPrice(BoxPrice boxPrice) {
         super(boxPrice);
-        this.cost=boxPrice.cost;
+        this.cost = boxPrice.cost;
     }
 }

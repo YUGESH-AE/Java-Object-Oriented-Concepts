@@ -1,6 +1,8 @@
 package com.yugesh.collectionFramework.setInterface;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.LinkedHashSet;
 
 public class LinkedHashSetExample {
     public static void main(String[] args) {

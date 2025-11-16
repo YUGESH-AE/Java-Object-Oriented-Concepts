@@ -4,51 +4,57 @@ import java.util.Arrays;
 
 public class CustomArrayList {
 
+    private static int DEFAULT_SIZE = 10;
     private int[] data;
+    private int size = 0;
 
-    private static int DEFAULT_SIZE=10;
-
-    private int size=0;
-
-    public CustomArrayList(){
-        this.data=new int[DEFAULT_SIZE];
+    public CustomArrayList() {
+        this.data = new int[DEFAULT_SIZE];
     }
 
-    public void add(int num){
-        if(isFull()){
+    static void main() {
+        CustomArrayList list = new CustomArrayList();
+        list.add(10);
+        list.add(20);
+        list.add(30);
+        System.out.println(list);
+    }
+
+    public void add(int num) {
+        if (isFull()) {
             resize();
         }
-        data[size++]=num;
+        data[size++] = num;
     }
 
     private void resize() {
-        int[]temp=new int[data.length*2];
-        for(int i=0;i<data.length;i++){
-            temp[i]=data[i];
+        int[] temp = new int[data.length * 2];
+        for (int i = 0; i < data.length; i++) {
+            temp[i] = data[i];
         }
-        data=temp;
+        data = temp;
     }
 
     private boolean isFull() {
-        return size==data.length;
+        return size == data.length;
     }
 
-    public int remove(){
+    public int remove() {
         return data[--size];
     }
 
-    public int get(int index){
+    public int get(int index) {
         return data[index];
     }
 
-    public int size(){
+    public int size() {
         return size;
 
 
     }
 
-    public void set(int index,int value){
-        data[index]=value;
+    public void set(int index, int value) {
+        data[index] = value;
     }
 
     @Override
@@ -56,14 +62,6 @@ public class CustomArrayList {
         return "CustomArrayList{" +
                 "data=" + Arrays.toString(data) +
                 '}';
-    }
-
-    static void main() {
-        CustomArrayList list=new CustomArrayList();
-        list.add(10);
-        list.add(20);
-        list.add(30);
-        System.out.println(list);
     }
 
 }

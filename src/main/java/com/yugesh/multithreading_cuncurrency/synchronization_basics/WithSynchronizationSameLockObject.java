@@ -1,21 +1,10 @@
 package com.yugesh.multithreading_cuncurrency.synchronization_basics;
 
 public class WithSynchronizationSameLockObject {
-    
-    int counrter = 0;
 
     //same lock object for both threads
     final Object lock = new Object();
-
-    void incrementCounter() {
-        synchronized (lock) {
-            counrter++;
-        }
-    }
-
-    public String toString() {
-        return "Final counter value :" + counrter;
-    }
+    int counrter = 0;
 
     static void main() {
 
@@ -25,7 +14,7 @@ public class WithSynchronizationSameLockObject {
 
             Thread t1 = new Thread(() -> {
                 for (int i = 0; i < 1_000_000; i++) {
-                   c.incrementCounter();
+                    c.incrementCounter();
                 }
             });
             Thread t2 = new Thread(() -> {
@@ -43,6 +32,16 @@ public class WithSynchronizationSameLockObject {
             System.out.println(e.getMessage());
         }
 
+    }
+
+    void incrementCounter() {
+        synchronized (lock) {
+            counrter++;
+        }
+    }
+
+    public String toString() {
+        return "Final counter value :" + counrter;
     }
 
 

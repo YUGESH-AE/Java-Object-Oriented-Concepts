@@ -1,59 +1,57 @@
 package com.yugesh.multithreading_cuncurrency.static_nonStatic_synchronization;
 
 public class StaticSynchronization {
-    
-     static int counter=0;
 
-    static synchronized void incrementCounter(){
+    static int counter = 0;
+
+    static synchronized void incrementCounter() {
         counter++;
     }
 
-    public String toString(){
-        return " "+counter;
-    }
+    static void main() {
 
-    static void main(){
+        try {
 
-        try{
+            StaticSynchronization obj1 = new StaticSynchronization();
 
-             StaticSynchronization obj1=new StaticSynchronization();
+            StaticSynchronization obj2 = new StaticSynchronization();
 
-             StaticSynchronization obj2=new StaticSynchronization ();
-
-             Thread t1=new Thread(()->{
-                for(int i=0;i<1_000_000;i++){
+            Thread t1 = new Thread(() -> {
+                for (int i = 0; i < 1_000_000; i++) {
                     obj1.incrementCounter();
                 }
-             });
+            });
 
-             Thread t2=new Thread(()->{
-                for(int i=0;i<1_000_000;i++){
+            Thread t2 = new Thread(() -> {
+                for (int i = 0; i < 1_000_000; i++) {
                     obj1.incrementCounter();
                 }
-             });
+            });
 
-             Thread t3=new Thread(()->{
-                for(int i=0;i<1_000_000;i++){
+            Thread t3 = new Thread(() -> {
+                for (int i = 0; i < 1_000_000; i++) {
                     obj2.incrementCounter();
                 }
-             });
+            });
 
-             t1.start();
-             t2.start();
-             t3.start();
-             t1.join();
-                t2.join();
-                t3.join();
+            t1.start();
+            t2.start();
+            t3.start();
+            t1.join();
+            t2.join();
+            t3.join();
 
-                System.out.println("Obj1 Counter Value: "+obj1);
-                System.out.println("Obj2 Counter Value: "+obj2);
-             
-             
+            System.out.println("Obj1 Counter Value: " + obj1);
+            System.out.println("Obj2 Counter Value: " + obj2);
 
 
-        }catch (Exception e){
+        } catch (Exception e) {
             System.out.println(e.getMessage());
         }
 
+    }
+
+    public String toString() {
+        return " " + counter;
     }
 }
