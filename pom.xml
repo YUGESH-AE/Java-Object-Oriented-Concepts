@@ -1,6 +1,7 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
@@ -10,12 +11,10 @@
 
     <name>Java-Object-Oriented-Concepts</name>
 
-    <!-- ✅ Define Java version once -->
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>25</java.version>
-        <maven.compiler.source>${java.version}</maven.compiler.source>
-        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <lombok.version>1.18.42</lombok.version>
     </properties>
 
     <dependencies>
@@ -25,26 +24,42 @@
             <version>4.13.2</version>
             <scope>test</scope>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+
+        <!-- Lombok (same version in both dependency + annotation processor) -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.42</version>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
     <build>
         <plugins>
+
+            <!-- SINGLE compiler plugin (correct one) -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.11.0</version>
+                <version>3.13.0</version>
                 <configuration>
-                    <!-- ✅ Use the same placeholder -->
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
+                    <!-- Strongly recommended for Java 21+ -->
+                    <release>${java.version}</release>
+
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                            <version>${lombok.version}</version>
+                        </path>
+                    </annotationProcessorPaths>
                 </configuration>
             </plugin>
+<<<<<<< Updated upstream
+=======
+
+            <!-- Java version enforcement -->
+>>>>>>> Stashed changes
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-enforcer-plugin</artifactId>
@@ -58,7 +73,10 @@
                         <configuration>
                             <rules>
                                 <requireJavaVersion>
+<<<<<<< Updated upstream
                                     <!-- Require Java 25 or newer -->
+=======
+>>>>>>> Stashed changes
                                     <version>[25,)</version>
                                 </requireJavaVersion>
                             </rules>
@@ -67,6 +85,11 @@
                     </execution>
                 </executions>
             </plugin>
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
         </plugins>
     </build>
+
 </project>
