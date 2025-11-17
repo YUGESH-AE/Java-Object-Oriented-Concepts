@@ -1,4 +1,4 @@
-package com.yugesh.multithreading_cuncurrency.atomicityExample;
+package com.yugesh.multithreading_cuncurrency.threadsOnVariableExample.atomicityExample;
 
 public class WithoutAtomicityExample {
 
