@@ -18,13 +18,13 @@ public class StaticBlock {
      */
 
     static void main() {
-        StaticBlock obj1 = new StaticBlock();
+        new StaticBlock();
         System.out.println(StaticBlock.a + " " + StaticBlock.b);
 
         StaticBlock.b += 3;
         System.out.println(StaticBlock.a + " " + StaticBlock.b);
 
-        StaticBlock obj2 = new StaticBlock();
+        new StaticBlock();
         System.out.println(StaticBlock.a + " " + StaticBlock.b);
 
     }

@@ -23,9 +23,9 @@ public class Human {
     }
 
     static void main() {
-        Human yugesh = new Human(26, "com/yugesh", 70000, false);
-        Human ram = new Human(26, "Ram", 70000, false);
-        System.out.println(yugesh.population);
+        new Human(26, "com/yugesh", 70000, false);
+        new Human(26, "Ram", 70000, false);
+        System.out.println(Human.population);
 
     }
 }

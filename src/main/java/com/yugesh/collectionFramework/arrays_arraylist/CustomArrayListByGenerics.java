@@ -4,12 +4,15 @@ import java.util.Arrays;
 
 public class CustomArrayListByGenerics<T> {
 
-    private static int DEFAULT_SIZE = 10;
+    private static final int DEFAULT_SIZE = 10;
     private T[] data;
     private int size = 0;
 
     public CustomArrayListByGenerics() {
-        this.data = (T[]) new Object[DEFAULT_SIZE];
+        // unavoidable unchecked cast when creating generic array
+        @SuppressWarnings("unchecked")
+        T[] arr = (T[]) new Object[DEFAULT_SIZE];
+        this.data = arr;
     }
 
     static void main() {
@@ -31,11 +34,11 @@ public class CustomArrayListByGenerics<T> {
     }
 
     public T remove() {
-        return (T) data[--size];
+        return data[--size];
     }
 
-    public int get(int index) {
-        return (int) data[index];
+    public T get(int index) {
+        return data[index];
     }
 
     public int size() {
@@ -56,10 +59,9 @@ public class CustomArrayListByGenerics<T> {
     }
 
     private void resize() {
+        @SuppressWarnings("unchecked")
         T[] temp = (T[]) new Object[data.length * 2];
-        for (int i = 0; i < data.length; i++) {
-            temp[i] = data[i];
-        }
+        System.arraycopy(data, 0, temp, 0, data.length);
         data = temp;
     }
 }

@@ -36,7 +36,9 @@ class CollectionIterable<T> implements Iterable<T> {
     private int size;
 
     public CollectionIterable(int capacity) {
-        this.data = (T[]) new Object[capacity];
+        @SuppressWarnings("unchecked")
+        T[] arr = (T[]) new Object[capacity];
+        this.data = arr;
         this.size = 0;
     }
 
