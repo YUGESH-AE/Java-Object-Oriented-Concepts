@@ -1,13 +1,9 @@
 package com.yugesh.mapFramework;
 
+import lombok.*;
+
 import java.util.HashMap;
 import java.util.Map;
-
-import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
 
 public class HashMapExample {
 
@@ -47,14 +43,13 @@ public class HashMapExample {
         map.putIfAbsent("Z", new Student(89, "ravi"));// Inserted
 
         // System.out.println(map);
-        map.computeIfAbsent("G", v->new Student(67,"sundar"));
-        map.computeIfAbsent("H", v->new Student(007,"harish"));
+        map.computeIfAbsent("G", v -> new Student(67, "sundar"));
+        map.computeIfAbsent("H", v -> new Student(007, "harish"));
 
         // System.out.println(map);
 
         // 7. computeIfPresent()
 //        map.computeIfPresent();
-
 
 
     }

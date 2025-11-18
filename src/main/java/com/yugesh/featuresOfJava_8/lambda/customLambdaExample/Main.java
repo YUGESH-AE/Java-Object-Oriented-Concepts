@@ -7,18 +7,18 @@ public class Main {
     static void main() {
 
 
-        HotelService service=new HotelService();
+        HotelService service = new HotelService();
 
-        List<Hotel>filteredBasedOnRatings =service
+        List<Hotel> filteredBasedOnRatings = service
                 .filterHotels(
-                        hotel->hotel.getRatings()<3
+                        hotel -> hotel.getRatings() < 3
                 );
 
         System.out.println(filteredBasedOnRatings);
 
-        List<Hotel>fiveStartHotels=service
+        List<Hotel> fiveStartHotels = service
                 .filterHotels(
-                        hotel->hotel.getHotelType().equals(HotelType.FIVE_STAR)
+                        hotel -> hotel.getHotelType().equals(HotelType.FIVE_STAR)
                 );
         System.out.println(fiveStartHotels);
     }

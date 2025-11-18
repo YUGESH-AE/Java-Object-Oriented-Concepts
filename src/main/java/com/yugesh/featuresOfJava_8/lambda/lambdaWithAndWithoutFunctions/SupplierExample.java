@@ -9,19 +9,19 @@ public class SupplierExample {
     static void main() {
 
         //Before Lambda
-        Supplier<LocalDateTime>dateTimeSupplier=new Supplier<LocalDateTime>() {
+        Supplier<LocalDateTime> dateTimeSupplier = new Supplier<LocalDateTime>() {
             @Override
             public LocalDateTime get() {
                 return LocalDateTime.now();
             }
         };
-        System.out.println("Without lambda:"+dateTimeSupplier.get());
+        System.out.println("Without lambda:" + dateTimeSupplier.get());
 
         //After Lambda
 
-        Supplier<LocalTime>timeSupplier=()->LocalTime.now();
+        Supplier<LocalTime> timeSupplier = () -> LocalTime.now();
 
-        System.out.println("Current time:"+timeSupplier.get());
+        System.out.println("Current time:" + timeSupplier.get());
 
     }
 }
