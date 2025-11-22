@@ -1,4 +1,4 @@
-package com.yugesh.streams;
+package com.yugesh.featuresOfJava_8.streams;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

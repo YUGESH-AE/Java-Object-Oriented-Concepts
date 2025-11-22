@@ -1,4 +1,4 @@
-package com.yugesh.streams;
+package com.yugesh.featuresOfJava_8.streams;
 
 import java.util.stream.Stream;
 
