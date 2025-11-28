@@ -1,4 +1,4 @@
-package com.yugesh.singleton;
+package com.yugesh.oops.singleton;
 
 public class Singleton {
 

@@ -1,5 +1,10 @@
 package com.yugesh.featuresOfJava_8.lambda.methodReference;
 
+@FunctionalInterface
+interface Addition {
+    int sum(int a, int b);
+}
+
 public class UserDefinedMethodRef {
 
     // A method reference is just a shorter way of writing a lambda expression when
@@ -19,9 +24,4 @@ public class UserDefinedMethodRef {
     static int addition(int a, int b) {
         return a + b;
     }
-}
-
-@FunctionalInterface
-interface Addition {
-    int sum(int a, int b);
 }

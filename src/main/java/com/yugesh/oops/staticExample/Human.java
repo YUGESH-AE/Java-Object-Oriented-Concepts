@@ -1,4 +1,4 @@
-package com.yugesh.staticExample;
+package com.yugesh.oops.staticExample;
 
 
 public class Human {

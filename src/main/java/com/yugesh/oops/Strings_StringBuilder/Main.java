@@ -1,4 +1,4 @@
-package com.yugesh.Strings_StringBuilder;
+package com.yugesh.oops.Strings_StringBuilder;
 
 public class Main {
 
