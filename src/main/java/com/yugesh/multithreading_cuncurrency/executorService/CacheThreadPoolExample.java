@@ -1,5 +1,7 @@
 package com.yugesh.multithreading_cuncurrency.executorService;
 
+import com.yugesh.CPUCores;
+
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -8,7 +10,7 @@ public class CacheThreadPoolExample {
     static void main() {
         try (ExecutorService executorService = Executors.newCachedThreadPool()) {
 
-            int noOfThread = Runtime.getRuntime().availableProcessors();
+            int noOfThread = CPUCores.getCpuCores();
             System.out.println("No of Threads in the Machine is " + noOfThread);
 
             for (int i = 0; i < 100; i++) {
@@ -16,7 +18,6 @@ public class CacheThreadPoolExample {
                 executorService
                         .submit(() -> System.out.println("Task " + id + " -> " + Thread.currentThread().getName()));
             }
-            executorService.shutdown();
 
         } catch (Exception e) {
             System.out.println();
