@@ -12,7 +12,7 @@ public class CallableFutureProblems {
 
     static void main() {
 
-        try(ExecutorService service= Executors.newCachedThreadPool()){
+        try (ExecutorService service = Executors.newCachedThreadPool()) {
 
             /**
              * This a bad practice as we are submitting the task and
@@ -31,22 +31,22 @@ public class CallableFutureProblems {
              * so which ever task completed we will be getting those result
              */
 
-            List<Future<Integer>>futureList=new ArrayList<>();
-            for(int i=0;i<100;i++){
+            List<Future<Integer>> futureList = new ArrayList<>();
+            for (int i = 0; i < 100; i++) {
                 futureList.add(service.submit(new Task()));
             }
 
-            for(Future<Integer> future:futureList){
+            for (Future<Integer> future : futureList) {
                 System.out.println(future.get());
             }
 
 
-        }catch (Exception e){
+        } catch (Exception e) {
             System.out.println(e.getMessage());
         }
     }
 
-    static class Task implements Callable<Integer>{
+    static class Task implements Callable<Integer> {
 
         @Override
         public Integer call() throws Exception {

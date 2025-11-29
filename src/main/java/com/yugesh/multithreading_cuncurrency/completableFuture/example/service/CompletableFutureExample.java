@@ -10,25 +10,25 @@ public class CompletableFutureExample {
 
     static void main() {
         try (
-                ExecutorService cpuBound= Executors.newCachedThreadPool();
-                ExecutorService inBound=Executors.newFixedThreadPool(3);
-                ){
+                ExecutorService cpuBound = Executors.newCachedThreadPool();
+                ExecutorService inBound = Executors.newFixedThreadPool(3);
+        ) {
 
-            List<CompletableFuture<Void>>list=new ArrayList<>();
+            List<CompletableFuture<Void>> list = new ArrayList<>();
 
-            for(int i=0;i<10;i++){
+            for (int i = 0; i < 10; i++) {
 
-                CompletableFuture<Void>future= CompletableFuture.supplyAsync(OrderService::getOrder,inBound)
-                        .thenApplyAsync(OrderService::enrich,cpuBound)
-                        .thenApplyAsync(OrderService::performPayment,cpuBound)
-                        .thenApplyAsync(OrderService::dispatch,inBound)
-                        .thenAcceptAsync(OrderService::sendEmail,cpuBound);
+                CompletableFuture<Void> future = CompletableFuture.supplyAsync(OrderService::getOrder, inBound)
+                        .thenApplyAsync(OrderService::enrich, cpuBound)
+                        .thenApplyAsync(OrderService::performPayment, cpuBound)
+                        .thenApplyAsync(OrderService::dispatch, inBound)
+                        .thenAcceptAsync(OrderService::sendEmail, cpuBound);
                 list.add(future);
             }
 
-           CompletableFuture.allOf(list.toArray(new CompletableFuture[0])).join();
+            CompletableFuture.allOf(list.toArray(new CompletableFuture[0])).join();
 
-        }catch (Exception e){
+        } catch (Exception e) {
             System.out.println(e.getMessage());
         }
     }

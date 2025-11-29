@@ -4,7 +4,7 @@ import com.yugesh.multithreading_cuncurrency.completableFuture.example.model.Ord
 
 public class OrderService {
 
-    public static Order getOrder(){
+    public static Order getOrder() {
         try {
             Thread.sleep(500);
         } catch (InterruptedException e) {
@@ -13,7 +13,7 @@ public class OrderService {
         return new Order("ORDER");
     }
 
-    public static Order enrich(Order o){
+    public static Order enrich(Order o) {
         try {
             Thread.sleep(300);
         } catch (InterruptedException e) {
@@ -22,7 +22,7 @@ public class OrderService {
         return o;
     }
 
-    public static Order performPayment(Order o){
+    public static Order performPayment(Order o) {
         try {
             Thread.sleep(800);
         } catch (InterruptedException e) {
@@ -31,7 +31,7 @@ public class OrderService {
         return o;
     }
 
-    public static Order dispatch(Order o){
+    public static Order dispatch(Order o) {
         try {
             Thread.sleep(400);
         } catch (InterruptedException e) {
@@ -40,16 +40,16 @@ public class OrderService {
         return o;
     }
 
-    public static void sendEmail(Order o){
+    public static void sendEmail(Order o) {
         try {
             Thread.sleep(200);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        System.out.println("Email sent for order id:"+o.getId());
+        System.out.println("Email sent for order id:" + o.getId());
     }
 
-    public static void sleep(long ms){
+    public static void sleep(long ms) {
         try {
             Thread.sleep(ms);
         } catch (InterruptedException e) {
