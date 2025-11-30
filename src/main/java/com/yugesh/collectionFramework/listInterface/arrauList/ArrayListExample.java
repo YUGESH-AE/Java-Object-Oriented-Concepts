@@ -1,4 +1,4 @@
-package com.yugesh.collectionFramework.listInterface;
+package com.yugesh.collectionFramework.listInterface.arrauList;
 
 import java.util.*;
 
