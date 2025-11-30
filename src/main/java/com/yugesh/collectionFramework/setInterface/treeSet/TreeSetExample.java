@@ -1,4 +1,4 @@
-package com.yugesh.collectionFramework.setInterface;
+package com.yugesh.collectionFramework.setInterface.treeSet;
 
 import java.util.TreeSet;
 

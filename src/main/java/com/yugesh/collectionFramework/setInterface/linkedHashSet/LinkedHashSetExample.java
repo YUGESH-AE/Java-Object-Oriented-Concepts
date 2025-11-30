@@ -1,51 +1,51 @@
-package com.yugesh.collectionFramework.setInterface;
+package com.yugesh.collectionFramework.setInterface.linkedHashSet;
 
 import java.util.Arrays;
-import java.util.HashSet;
 import java.util.Iterator;
+import java.util.LinkedHashSet;
 
-public class HashSetExample {
+public class LinkedHashSetExample {
     public static void main(String[] args) {
 
-        // 1. Create HashSet
-        HashSet<String> set = new HashSet<>();
+        // 1. Create LinkedHashSet
+        LinkedHashSet<String> set = new LinkedHashSet<>();
 
         // 2. Add elements
         set.add("A");
         set.add("B");
         set.add("C");
-        set.add("A");   // duplicate, ignored
-        set.add(null);  // allowed (only one null)
+        set.add(null);    // allowed
+        set.add("A");     // duplicate, ignored
 
-        System.out.println("Initial HashSet: " + set);
+        System.out.println("Initial LinkedHashSet: " + set);
+        // Output will maintain insertion order: [A, B, C, null]
 
-        // 3. Check if element exists
+        // 3. contains()
         System.out.println("Contains 'B'? " + set.contains("B"));
-        System.out.println("Contains 'Z'? " + set.contains("Z"));
 
-        // 4. Remove elements
-        set.remove("B");     // remove element
-        System.out.println("After removing B: " + set);
+        // 4. remove()
+        set.remove("C");
+        System.out.println("After removing C: " + set);
 
-        // 5. Size and emptiness
+        // 5. size() and isEmpty()
         System.out.println("Size: " + set.size());
         System.out.println("Is empty? " + set.isEmpty());
 
-        // 6. Add multiple elements (addAll)
+        // 6. addAll()
         set.addAll(Arrays.asList("X", "Y", "Z"));
         System.out.println("After addAll: " + set);
 
-        // 7. Remove multiple elements (removeAll)
+        // 7. removeAll()
         set.removeAll(Arrays.asList("X", "Z"));
         System.out.println("After removeAll: " + set);
 
-        // 8. Retain only specific elements (retainAll)
-        set.retainAll(Arrays.asList("A", "C"));
+        // 8. retainAll()
+        set.retainAll(Arrays.asList("A", "B"));
         System.out.println("After retainAll: " + set);
 
         // 9. Convert to array
         Object[] arr = set.toArray();
-        System.out.println("To array: " + Arrays.toString(arr));
+        System.out.println("Array: " + Arrays.toString(arr));
 
         // 10. Iterate using for-each
         System.out.print("For-each: ");
@@ -54,7 +54,7 @@ public class HashSetExample {
         }
         System.out.println();
 
-        // 11. Iterate using iterator
+        // 11. Iterator
         System.out.print("Iterator: ");
         Iterator<String> it = set.iterator();
         while (it.hasNext()) {
