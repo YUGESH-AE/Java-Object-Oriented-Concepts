@@ -1,4 +1,4 @@
-package com.yugesh.mapFramework;
+package com.yugesh.mapFramework.treeMap;
 
 import java.util.TreeMap;
 

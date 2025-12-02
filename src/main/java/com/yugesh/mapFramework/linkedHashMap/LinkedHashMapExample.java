@@ -1,4 +1,4 @@
-package com.yugesh.mapFramework;
+package com.yugesh.mapFramework.linkedHashMap;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

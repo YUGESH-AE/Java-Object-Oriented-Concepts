@@ -1,4 +1,4 @@
-package com.yugesh.mapFramework;
+package com.yugesh.mapFramework.hashMap;
 
 import lombok.*;
 
