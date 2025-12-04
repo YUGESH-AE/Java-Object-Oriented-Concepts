@@ -99,7 +99,7 @@ public class CollectorPartitionByExample_1 {
                         Collectors.partitioningBy(
                                 e -> e.salary() > 5000,
                                 Collectors.mapping(
-                                        Employee::name,
+                                        Emp::name,
                                         Collectors.toList())));
     }
 
