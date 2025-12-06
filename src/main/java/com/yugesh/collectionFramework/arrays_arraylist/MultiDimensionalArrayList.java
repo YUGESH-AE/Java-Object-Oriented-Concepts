@@ -9,9 +9,12 @@ public class MultiDimensionalArrayList {
 
     static void main() {
 
-        Scanner scanner = new Scanner(System.in);
 
-        List<List<Integer>> multiList = new ArrayList<>();
+
+        try ( Scanner scanner = new Scanner(System.in);) {
+            
+
+            List<List<Integer>> multiList = new ArrayList<>();
 
         System.out.println("Enter the outer list size:: ");
         int outSize = scanner.nextInt();
@@ -32,6 +35,13 @@ public class MultiDimensionalArrayList {
         for (List<Integer> row : multiList) {
             System.out.println(row);
         }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
+       
+
+        
 
 
     }

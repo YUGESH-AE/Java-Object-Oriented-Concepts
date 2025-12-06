@@ -3,11 +3,9 @@ package com.yugesh.featuresOfJava_8.streams.collectorsMethod.Collectors;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import com.yugesh.featuresOfJava_8.lambda.lambdaWithAndWithoutFunctions.Employee;
 
 public class CollectorPartitionByExample_1 {
 
@@ -101,6 +99,8 @@ public class CollectorPartitionByExample_1 {
                                 Collectors.mapping(
                                         Emp::name,
                                         Collectors.toList())));
+
+                                        System.out.println(emplMap);
     }
 
 }
