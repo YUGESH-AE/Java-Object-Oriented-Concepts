@@ -100,7 +100,7 @@ public class CollectorPartitionByExample_1 {
                                         Emp::name,
                                         Collectors.toList())));
 
-                                        System.out.println(emplMap);
+        System.out.println(emplMap);
     }
 
 }

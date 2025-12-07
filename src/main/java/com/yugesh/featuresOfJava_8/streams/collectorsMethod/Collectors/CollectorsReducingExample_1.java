@@ -1,10 +1,10 @@
 package com.yugesh.featuresOfJava_8.streams.collectorsMethod.Collectors;
 
+import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-import java.util.List;
-import java.util.Map;
 
 public class CollectorsReducingExample_1 {
 
@@ -52,7 +52,7 @@ public class CollectorsReducingExample_1 {
      * Collectors.reducing(identity, mapper, BinaryOperator)
      * Starts with an identity value
      * Applies a mapper to each element
-     * 
+     * <p>
      * Reduces all mapped values using BinaryOperator
      */
     public static void method_2() {
