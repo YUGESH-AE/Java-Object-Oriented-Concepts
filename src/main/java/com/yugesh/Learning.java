@@ -12,29 +12,13 @@ public class Learning {
     static void main() {
 
 
-        Map<Integer, String> map = Main.employeeList()
-                .stream()
-                .collect(
-                        Collectors.toMap(
-                                Employee::getId,
-                                Employee::getName
-                        )
-                );
-        TreeMap<Integer, String> maps = new TreeMap<>(map);
-        String v1 = maps.putIfAbsent(40, "yugesh");
-        System.out.println(v1);
-        maps.putIfAbsent(1, "Arjun");
-        maps.replace(2, "sandhaya", "Kavya");
-        String value1 = maps.computeIfAbsent(0, k -> "Ravi");
-        String value2 = maps.computeIfPresent(0, (k, v) -> "Sanjay");
-        System.out.println(value1);
-        System.out.println(value2);
-        maps.compute(0, (k, v) -> v + "-yugesh");
-        System.out.println(maps);
-//        maps.forEach((k,v)-> System.out.println("Key:"+k+"  "+"value:"+v));
+        int[]arr= {1, 1, 2, 2, 2, 3, 4, 4};
 
-        System.out.println(maps.lowerEntry(4));
-        System.out.println(maps.lowerKey(4));
+        int slow=0,fast=1;
+
+        while (fast<arr.length){
+
+        }
 
 
     }
