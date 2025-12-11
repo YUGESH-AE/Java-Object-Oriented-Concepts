@@ -8,6 +8,12 @@ public class FirstNonRepeatingNumber {
 
     static void main() {
         int[]a={4, 5, 1, 2, 0, 4};
+
+    firstNonRepeating(a);
+        
+    }
+
+    public static void firstNonRepeating(int[]a){
         Map<Integer,Integer> map=new LinkedHashMap<>();
         for(int i=0;i<a.length;i++){
             if(map.containsKey(a[i])){

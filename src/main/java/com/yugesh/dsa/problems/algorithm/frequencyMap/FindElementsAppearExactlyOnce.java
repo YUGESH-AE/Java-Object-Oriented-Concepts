@@ -9,7 +9,12 @@ public class FindElementsAppearExactlyOnce {
     static void main() {
 
         int[]a={1, 2, 2, 3, 4, 4, 5};
+        findExactlyOne(a);
 
+        
+    }
+
+    public static void findExactlyOne(int[]a){
         Map<Integer,Integer>map=new HashMap<>();
         for(int i=0;i<a.length;i++){
             if(map.containsKey(a[i])){

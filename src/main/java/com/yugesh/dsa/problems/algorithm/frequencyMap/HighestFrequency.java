@@ -8,6 +8,12 @@ public class HighestFrequency {
     static void main() {
 
         int[]a={4, 5, 4, 5, 4, 6, 5};
+
+        System.out.println(higher(a));
+        
+    }
+
+    public static int higher(int[]a){
         Map<Integer,Integer> map=new LinkedHashMap<>();
         for(int i=0;i<a.length;i++){
             if(map.containsKey(a[i])){
@@ -19,15 +25,15 @@ public class HighestFrequency {
         }
         System.out.println(map);
 
-        int start=0;
+        int maxFrequency=0,result=-1;
 
-        for(int i=1;i<a.length;i++){
-            if(map.get(a[start])>=map.get(a[i])){
-                System.out.println(a[start]);
-                return;
+        for(Map.Entry<Integer,Integer>entry:map.entrySet()){
+
+            if(entry.getValue()>maxFrequency){
+                maxFrequency=entry.getValue();
+                result=entry.getKey();
             }
-            start++;
-
         }
+        return result;
     }
 }

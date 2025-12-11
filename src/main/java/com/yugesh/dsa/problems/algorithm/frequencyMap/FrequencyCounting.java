@@ -10,7 +10,11 @@ public class FrequencyCounting {
     static void main() {
         int[]a={1, 2, 2, 3, 3, 3};
 
-        Map<Integer,Long> map=new HashMap<>();
+       countFrequency(a);
+    }
+
+    public static void countFrequency(int[]a){
+         Map<Integer,Long> map=new HashMap<>();
 
         for(int i:a){
             map.compute(i,(k,v)->v==null?1:v+1);
