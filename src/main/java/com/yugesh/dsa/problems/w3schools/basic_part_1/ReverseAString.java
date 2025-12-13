@@ -8,22 +8,22 @@ public class ReverseAString {
 
     }
 
-    public static void reserveUsingStringBuilder(String s){
-        StringBuilder builder=new StringBuilder(s);
+    public static void reserveUsingStringBuilder(String s) {
+        StringBuilder builder = new StringBuilder(s);
         System.out.println(builder.reverse());
     }
 
-    public static void manual(String s){
-        char[]c=s.toCharArray();
-        int start=0;
-        int end=c.length-1;
+    public static void manual(String s) {
+        char[] c = s.toCharArray();
+        int start = 0;
+        int end = c.length - 1;
         char temp;
-        while (start<end){
-         temp=c[start];
-         c[start]=c[end];
-         c[end]=temp;
-         start++;
-         end--;
+        while (start < end) {
+            temp = c[start];
+            c[start] = c[end];
+            c[end] = temp;
+            start++;
+            end--;
         }
         System.out.println(c);
     }

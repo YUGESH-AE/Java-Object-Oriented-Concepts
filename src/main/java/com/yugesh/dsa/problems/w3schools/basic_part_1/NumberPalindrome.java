@@ -7,15 +7,15 @@ public class NumberPalindrome {
 
     }
 
-    public static void palindrome(int num){
-        int original=num;
-        int reversed=0;
+    public static void palindrome(int num) {
+        int original = num;
+        int reversed = 0;
 
-        while (num!=0){
-            int div=num%10;
-            reversed=reversed*10+div;
-            num=num/10;
+        while (num != 0) {
+            int div = num % 10;
+            reversed = reversed * 10 + div;
+            num = num / 10;
         }
-        System.out.println(original==reversed?"palindrome":"not a palindrome");
+        System.out.println(original == reversed ? "palindrome" : "not a palindrome");
     }
 }

@@ -1,12 +1,11 @@
 package com.yugesh.dsa.problems.algorithm.k_selection_sorting.priorityQueue;
 
 import java.util.PriorityQueue;
-import java.util.Queue;
 
 public class Top_3_Largest {
     static void main() {
-        int[]a={5, 1, 10, 3, 20, 8};
-        top_3_largest(a,3);
+        int[] a = {5, 1, 10, 3, 20, 8};
+        top_3_largest(a, 3);
     }
 
     public static void top_3_largest(int[] a, int k) {

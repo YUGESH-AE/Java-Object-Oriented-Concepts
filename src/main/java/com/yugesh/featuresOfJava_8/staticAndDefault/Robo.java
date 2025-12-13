@@ -2,9 +2,16 @@ package com.yugesh.featuresOfJava_8.staticAndDefault;
 
 public class Robo implements Animal, Human {
 
+    static void main() {
+        Robo r = new Robo();
+        r.shout();
+        r.work();
+        r.defaultMethod1();
+    }
+
     @Override
     public void work() {
-        
+
         System.out.println("Working in a class");
     }
 
@@ -19,17 +26,9 @@ public class Robo implements Animal, Human {
      * to avoid the ambiguity
      */
     @Override
-    public void defaultMethod1(){
+    public void defaultMethod1() {
         Animal.super.defaultMethod1();
         Human.super.defaultMethod1();
-    }
-
-
-    static void main(){
-        Robo r=new Robo();
-        r.shout();
-        r.work();
-        r.defaultMethod1();
     }
 
 }
