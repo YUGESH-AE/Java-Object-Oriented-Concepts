@@ -9,12 +9,12 @@ public class EmployeeNamesOnly {
 
         List<Employee> employees = Employee.getEmployeeList();
 
-        List<String>names=employees.stream()
+        List<String> names = employees.stream()
                 .map(Employee::getName)
                 .toList();
         System.out.println(names);
 
-        long totalSalary= employees.stream()
+        long totalSalary = employees.stream()
                 .mapToInt(Employee::getSalary)
                 .sum();
         System.out.println(totalSalary);

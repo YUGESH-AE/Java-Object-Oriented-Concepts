@@ -8,7 +8,7 @@ public class LengthOfEachString {
 
         List<String> names = List.of("Java", "Stream", "API");
 
-        List<Integer>lengths=names.stream()
+        List<Integer> lengths = names.stream()
                 .map(String::length).toList();
         System.out.println(lengths);
 

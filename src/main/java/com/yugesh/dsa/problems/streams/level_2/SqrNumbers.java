@@ -7,8 +7,8 @@ public class SqrNumbers {
 
         List<Integer> numbers = List.of(1, 2, 3, 4);
 
-        List<Integer>square=numbers.stream()
-                .map(n->n*n)
+        List<Integer> square = numbers.stream()
+                .map(n -> n * n)
                 .toList();
         System.out.println(square);
 

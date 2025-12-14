@@ -9,16 +9,16 @@ import java.util.stream.Collectors;
 public class GroupingBy {
     static void main() {
 
-        List<Employee>employees=Employee.getEmployeeList();
+        List<Employee> employees = Employee.getEmployeeList();
 
-        Map<String,List<Employee>>deptMap=employees
+        Map<String, List<Employee>> deptMap = employees
                 .stream()
                 .collect(
                         Collectors.groupingBy(Employee::getDepartment)
                 );
         System.out.println(deptMap);
 
-        Map<String,Long> countMap=employees.stream()
+        Map<String, Long> countMap = employees.stream()
                 .collect(
                         Collectors.groupingBy(
                                 Employee::getDepartment,
@@ -27,7 +27,7 @@ public class GroupingBy {
                 );
         System.out.println(countMap);
 
-        Map<String,Double>salaryMap=employees
+        Map<String, Double> salaryMap = employees
                 .stream()
                 .collect(
                         Collectors.groupingBy(
@@ -38,7 +38,7 @@ public class GroupingBy {
 
         System.out.println(salaryMap);
 
-        Map<String,List<String>>namesMap=employees.stream()
+        Map<String, List<String>> namesMap = employees.stream()
                 .collect(
                         Collectors.groupingBy(
                                 Employee::getDepartment,

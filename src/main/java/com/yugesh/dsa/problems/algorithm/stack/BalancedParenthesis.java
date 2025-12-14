@@ -10,22 +10,22 @@ public class BalancedParenthesis {
     }
 
     public static boolean balanced(String s) {
-        if(s==null ||s.isEmpty()) return false;
+        if (s == null || s.isEmpty()) return false;
 
-        Deque<Character>stack=new ArrayDeque<>();
+        Deque<Character> stack = new ArrayDeque<>();
 
-        for(char ch:s.toCharArray()){
-            if(ch=='(' ||ch=='{' || ch=='['){
+        for (char ch : s.toCharArray()) {
+            if (ch == '(' || ch == '{' || ch == '[') {
                 stack.push(ch);
-            }else{
+            } else {
 
-                if(stack.isEmpty()) return false;
+                if (stack.isEmpty()) return false;
 
-                char top=stack.pop();
+                char top = stack.pop();
 
-                if(ch==')' && top!='(') return false;
-                if(ch=='}' && top!='{') return false;
-                if(ch==']' && top!='[') return false;
+                if (ch == ')' && top != '(') return false;
+                if (ch == '}' && top != '{') return false;
+                if (ch == ']' && top != '[') return false;
             }
         }
         return stack.isEmpty();

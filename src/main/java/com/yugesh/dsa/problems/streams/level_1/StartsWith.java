@@ -7,8 +7,8 @@ public class StartsWith {
 
         List<String> names = List.of("Adam", "Brian", "Alex", "Steve", "Ankit");
 
-        List<String>startsWith=names.stream()
-                .filter(s->s.startsWith("A"))
+        List<String> startsWith = names.stream()
+                .filter(s -> s.startsWith("A"))
                 .toList();
         System.out.println(startsWith);
 

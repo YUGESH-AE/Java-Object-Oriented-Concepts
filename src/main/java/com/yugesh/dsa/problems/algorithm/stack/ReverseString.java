@@ -6,23 +6,23 @@ import java.util.Deque;
 public class ReverseString {
 
     static void main() {
-        String s="abcd";
+        String s = "abcd";
         System.out.println(reverse(s));
     }
 
-    public static String reverse(String s){
-        if(s==null)return null;
+    public static String reverse(String s) {
+        if (s == null) return null;
 
-        Deque<Character>d=new ArrayDeque<>();
+        Deque<Character> d = new ArrayDeque<>();
 
-        for(char i:s.toCharArray()){
-           d.push(i);
+        for (char i : s.toCharArray()) {
+            d.push(i);
         }
-        StringBuilder sb=new StringBuilder();
-        while (!d.isEmpty()){
+        StringBuilder sb = new StringBuilder();
+        while (!d.isEmpty()) {
             sb.append(d.pop());
         }
 
-       return sb.toString();
+        return sb.toString();
     }
 }

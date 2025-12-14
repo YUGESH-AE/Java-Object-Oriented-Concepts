@@ -3,9 +3,9 @@ package com.yugesh.dsa.problems.algorithm.slidingWindow.fixedWindow;
 public class SumSubArrayTarget {
     static void main() {
 
-        int[]a={2, 1, 5, 1, 3, 2};
-        int k=3,target=7;
-        System.out.println(count(a,k,target));
+        int[] a = {2, 1, 5, 1, 3, 2};
+        int k = 3, target = 7;
+        System.out.println(count(a, k, target));
     }
 
     public static int count(int[] a, int k, int target) {

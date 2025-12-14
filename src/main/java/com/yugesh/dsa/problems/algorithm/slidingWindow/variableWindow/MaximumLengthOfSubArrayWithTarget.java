@@ -4,25 +4,25 @@ public class MaximumLengthOfSubArrayWithTarget {
 
     static void main() {
 
-        int[]a={2, 1, 5, 1, 3, 2};
-        int target=7;
+        int[] a = {2, 1, 5, 1, 3, 2};
+        int target = 7;
 
-        System.out.println(count(a,target));
+        System.out.println(count(a, target));
     }
 
-    public static int count(int[]a,int target){
-        if(a==null ||a.length==0) return 0;
-        int left=0;
-        int windowSum=0,maxLength=0;
+    public static int count(int[] a, int target) {
+        if (a == null || a.length == 0) return 0;
+        int left = 0;
+        int windowSum = 0, maxLength = 0;
 
-        for(int right=0;right<a.length;right++){
-            windowSum+=a[right];
+        for (int right = 0; right < a.length; right++) {
+            windowSum += a[right];
 
-            while (windowSum>target){
-                windowSum-=a[left];
+            while (windowSum > target) {
+                windowSum -= a[left];
                 left++;
             }
-            maxLength=Math.max(maxLength,right-left+1);
+            maxLength = Math.max(maxLength, right - left + 1);
         }
 
         return maxLength;
