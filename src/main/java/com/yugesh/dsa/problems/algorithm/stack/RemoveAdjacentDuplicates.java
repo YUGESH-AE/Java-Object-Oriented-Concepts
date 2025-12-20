@@ -5,32 +5,30 @@ import java.util.Deque;
 
 public class RemoveAdjacentDuplicates {
 
-    static void main() {
-        String s = "abbacab";
-        System.out.println(removeAdjacentDuplicate(s));
+    public static void main(String[] args) {
+
+        String s="abbaca";
+        System.out.println(removeAdjacent(s));
     }
 
-    public static String removeAdjacentDuplicate(String s) {
-
-        if (s == null || s.isEmpty()) return null;
-
-        Deque<Character> stack = new ArrayDeque<>();
-
-        for (char ch : s.toCharArray()) {
-            if (stack.isEmpty()) {
-                stack.push(ch);
-            } else {
-                if (stack.peek() != ch) {
-                    stack.push(ch);
-                } else {
+    public static String removeAdjacent(String s){
+        Deque<Character>stack=new ArrayDeque<>();
+        for(char c:s.toCharArray()){
+            if(stack.isEmpty()){
+                stack.push(c);
+            }else{
+                char top=stack.peek();
+                if(c==top){
                     stack.pop();
+                }else{
+                    stack.push(c);
                 }
             }
         }
-        StringBuilder builder = new StringBuilder();
-        for (char c : stack) {
-            builder.append(c);
+        StringBuilder sb=new StringBuilder();
+        while (!stack.isEmpty()){
+            sb.append(stack.pop());
         }
-        return builder.reverse().toString();
+        return sb.toString();
     }
 }
