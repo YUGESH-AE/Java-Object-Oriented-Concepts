@@ -1,6 +1,8 @@
 package com.yugesh.dsa.problems.streams.streamInterview_3;
 
 import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class StreamOfStrings_3 {
 
@@ -8,6 +10,10 @@ public class StreamOfStrings_3 {
 
         String[] s = {"abc", "123", "456", "xyz"};
         System.out.println(Arrays.toString(containsOnlyInteger(s)));
+
+        List<String> words = List.of("pan", "tap", "pat", "nap", "team", "tree","meat");
+
+        System.out.println(groupingAnagrams(words));
     }
 
     /**
@@ -24,5 +30,24 @@ public class StreamOfStrings_3 {
                 .toArray();
 
 
+    }
+
+    /**
+     *  Group /Pair anagrams from a list of Strings
+     * @param words
+     * @return
+     */
+    public  static List<List<String>> groupingAnagrams(List<String>words){
+
+        return words.stream()
+                .collect(
+                        Collectors.groupingBy(
+                                w->{
+                                    char[]c=w.toCharArray();
+                                    Arrays.sort(c);
+                                    return new String(c);
+                                }
+                        )
+                ).values().stream().toList();
     }
 }
