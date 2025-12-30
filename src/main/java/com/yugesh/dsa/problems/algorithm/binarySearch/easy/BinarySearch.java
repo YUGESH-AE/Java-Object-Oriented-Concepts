@@ -17,6 +17,8 @@ public class BinarySearch {
         System.out.println(lastOccurrence(lastOccurrenceArray, lastOccurrenceTarget));
 
         System.out.println(countOccurrence(lastOccurrenceArray, lastOccurrenceTarget));
+
+
     }
 
     public static int basicBinarySearch(int[] a, int target) {
@@ -93,4 +95,6 @@ public class BinarySearch {
 
         return count;
     }
+
+
 }
