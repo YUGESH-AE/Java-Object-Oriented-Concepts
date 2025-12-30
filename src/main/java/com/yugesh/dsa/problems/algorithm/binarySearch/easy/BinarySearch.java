@@ -15,6 +15,8 @@ public class BinarySearch {
         int[] lastOccurrenceArray = {1, 2, 2, 2, 3, 4};
         int lastOccurrenceTarget = 2;
         System.out.println(lastOccurrence(lastOccurrenceArray, lastOccurrenceTarget));
+
+        System.out.println(countOccurrence(lastOccurrenceArray, lastOccurrenceTarget));
     }
 
     public static int basicBinarySearch(int[] a, int target) {
@@ -75,5 +77,20 @@ public class BinarySearch {
             }
         }
         return value;
+    }
+
+    public static int countOccurrence(int[]a,int target){
+
+        int first= firstOccurrence(a, target);
+        int last=lastOccurrence(a, target);
+
+            if (first == -1) {
+        return 0;
+    }
+
+
+        int count=last-first+1;
+
+        return count;
     }
 }
