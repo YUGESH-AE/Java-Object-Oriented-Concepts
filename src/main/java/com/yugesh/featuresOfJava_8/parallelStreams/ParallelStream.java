@@ -35,7 +35,7 @@ public class ParallelStream {
         m.entrySet()
                 .stream()
                 .parallel()
-                        .forEachOrdered(System.out::println);
+                .forEachOrdered(System.out::println);
         System.out.println(endTime - startTime);
     }
 

@@ -11,7 +11,7 @@ public class StreamOfStrings_3 {
         String[] s = {"abc", "123", "456", "xyz"};
         System.out.println(Arrays.toString(containsOnlyInteger(s)));
 
-        List<String> words = List.of("pan", "tap", "pat", "nap", "team", "tree","meat");
+        List<String> words = List.of("pan", "tap", "pat", "nap", "team", "tree", "meat");
 
         System.out.println(groupingAnagrams(words));
     }
@@ -33,17 +33,18 @@ public class StreamOfStrings_3 {
     }
 
     /**
-     *  Group /Pair anagrams from a list of Strings
+     * Group /Pair anagrams from a list of Strings
+     *
      * @param words
      * @return
      */
-    public  static List<List<String>> groupingAnagrams(List<String>words){
+    public static List<List<String>> groupingAnagrams(List<String> words) {
 
         return words.stream()
                 .collect(
                         Collectors.groupingBy(
-                                w->{
-                                    char[]c=w.toCharArray();
+                                w -> {
+                                    char[] c = w.toCharArray();
                                     Arrays.sort(c);
                                     return new String(c);
                                 }

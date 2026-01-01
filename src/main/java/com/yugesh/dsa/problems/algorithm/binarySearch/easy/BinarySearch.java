@@ -21,6 +21,14 @@ public class BinarySearch {
 
     }
 
+    /**
+     * You are given a sorted array of integers and a target value.
+     * Your task is to find the index of the target in the array.
+     *
+     * @param a
+     * @param target
+     * @return
+     */
     public static int basicBinarySearch(int[] a, int target) {
 
         if (a == null || a.length == 0) {
@@ -41,6 +49,13 @@ public class BinarySearch {
         return -1;
     }
 
+    /**
+     * First Occurrence of a Target
+     *
+     * @param a
+     * @param target
+     * @return
+     */
     public static int firstOccurrence(int[] a, int target) {
         int left = 0, right = a.length - 1;
         int value = -1;
@@ -61,6 +76,13 @@ public class BinarySearch {
         return value;
     }
 
+    /**
+     * Last Occurrence of a Target
+     *
+     * @param a
+     * @param target
+     * @return
+     */
     public static int lastOccurrence(int[] a, int target) {
         int left = 0, right = a.length - 1;
         int value = -1;
@@ -81,17 +103,22 @@ public class BinarySearch {
         return value;
     }
 
-    public static int countOccurrence(int[]a,int target){
+    /**
+     * Count Occurrences of a Number
+     *
+     * @param a
+     * @param target
+     * @return
+     */
+    public static int countOccurrence(int[] a, int target) {
 
-        int first= firstOccurrence(a, target);
-        int last=lastOccurrence(a, target);
+        int first = firstOccurrence(a, target);
+        int last = lastOccurrence(a, target);
 
-            if (first == -1) {
-        return 0;
-    }
-
-
-        int count=last-first+1;
+        if (first == -1) {
+            return 0;
+        }
+        int count = last - first + 1;
 
         return count;
     }

@@ -1,4 +1,4 @@
-package com.yugesh.dsa.problems.algorithm.k_selection_sorting.priorityQueue;
+package com.yugesh.dsa.problems.algorithm.k_selection_sorting_Heap.priorityQueue;
 
 import java.util.Comparator;
 import java.util.PriorityQueue;

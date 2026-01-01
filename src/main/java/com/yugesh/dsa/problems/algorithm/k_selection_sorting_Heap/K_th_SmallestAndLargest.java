@@ -1,4 +1,4 @@
-package com.yugesh.dsa.problems.algorithm.k_selection_sorting;
+package com.yugesh.dsa.problems.algorithm.k_selection_sorting_Heap;
 
 import java.util.Arrays;
 
