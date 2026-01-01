@@ -13,7 +13,7 @@ public class MaximumLengthOfSubArrayWithTarget {
     public static int count(int[] a, int target) {
         if (a == null || a.length == 0) return 0;
         int left = 0;
-        int windowSum = 0, maxLength = 0;
+        int windowSum = 0, maxLength = Integer.MIN_VALUE;
 
         for (int right = 0; right < a.length; right++) {
             windowSum += a[right];
@@ -25,7 +25,7 @@ public class MaximumLengthOfSubArrayWithTarget {
             maxLength = Math.max(maxLength, right - left + 1);
         }
 
-        return maxLength;
+        return maxLength == Integer.MIN_VALUE ? 0 : maxLength;
 
     }
 }

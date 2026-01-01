@@ -25,6 +25,6 @@ public class MinLengthOfSubArrayWithTarget {
             }
 
         }
-        return min;
+        return min == Integer.MAX_VALUE ? 0 : min;
     }
 }
