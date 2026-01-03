@@ -1,4 +1,4 @@
-package com.yugesh.dsa.problems.algorithm.frequencyMap;
+package com.yugesh.dsa.problems.algorithm._2_frequencyMap;
 
 import java.util.*;
 import java.util.function.Function;
