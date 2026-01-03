@@ -1,4 +1,4 @@
-package com.yugesh.dsa.problems.algorithm.twoPointer.slowFast;
+package com.yugesh.dsa.problems.algorithm._1_twoPointer.slowFast;
 
 import java.util.Arrays;
 

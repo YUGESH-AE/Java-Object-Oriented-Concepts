@@ -1,4 +1,4 @@
-package com.yugesh.dsa.problems.algorithm.twoPointer;
+package com.yugesh.dsa.problems.algorithm._1_twoPointer;
 
 import java.util.Arrays;
 
