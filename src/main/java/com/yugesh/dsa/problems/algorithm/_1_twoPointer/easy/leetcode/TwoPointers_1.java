@@ -2,7 +2,7 @@ package com.yugesh.dsa.problems.algorithm._1_twoPointer.easy.leetcode;
 
 import java.util.Arrays;
 
-public class TwoPointers {
+public class TwoPointers_1 {
     static void main() {
 
         int[]twoSumNo={2, 7, 11, 15};
