@@ -20,6 +20,9 @@ public class TwoPointers_2 {
 
         String s="ab#c",t="ad#c";
         System.out.println(backSpaceStringCompare(s,t));
+
+        String reverseWords="Let's take LeetCode contest";
+         System.out.println(reverseWordsInString(reverseWords));
     }
 
     /**
@@ -153,23 +156,89 @@ public class TwoPointers_2 {
      * @param s2
      * @return
      */
-    public static boolean backSpaceStringCompare(String s1,String s2){
-        char[]c1=s1.toCharArray();
-        char[]c2=s2.toCharArray();
-        StringBuilder sb1=new StringBuilder();
-        for(int last=c1.length-1;last>=0;last--){
-            if(c1[last]=='#'){
-                last=last-2;
+    //need to learn after
+    public static boolean backSpaceStringCompare(String s, String t) {
+        int i = s.length() - 1;
+        int j = t.length() - 1;
+
+        int skipS = 0, skipT = 0;
+
+        while (i >= 0 || j >= 0) {
+
+            // Find next valid character in s
+            while (i >= 0) {
+                if (s.charAt(i) == '#') {
+                    skipS++;
+                    i--;
+                } else if (skipS > 0) {
+                    skipS--;
+                    i--;
+                } else {
+                    break;
+                }
             }
-            sb1.append(c1[last]);
-        }
-        StringBuilder sb2=new StringBuilder();
-        for(int last=c2.length-1;last>=0;last--){
-            if(c2[last]=='#'){
-                last=last-2;
+
+            // Find next valid character in t
+            while (j >= 0) {
+                if (t.charAt(j) == '#') {
+                    skipT++;
+                    j--;
+                } else if (skipT > 0) {
+                    skipT--;
+                    j--;
+                } else {
+                    break;
+                }
             }
-            sb2.append(c2[last]);
+
+            // Compare characters
+            if (i >= 0 && j >= 0) {
+                if (s.charAt(i) != t.charAt(j)) return false;
+            } else {
+                // One string ended before the other
+                if (i >= 0 || j >= 0) return false;
+            }
+
+            i--;
+            j--;
         }
-       return sb1.compareTo(sb2) == 0;
+
+        return true;
     }
+
+    /**
+     * Problem 11 — Reverse Words in a String III
+     * Source: LeetCode (Easy)
+     * Pattern: Two Pointer — in-place reversal inside segments
+     * Problem statement
+     * Given a string s, reverse the characters of each word while preserving:
+     * Word order
+     * Spaces
+     * Overall string structure
+     * A word is a sequence of non-space characters.
+     * @param word
+     * @return
+     */
+
+    public static String reverseWordsInString(String word){
+        int boundry=0,left=0,right=0;
+        char[]c=word.toCharArray();
+        while (boundry<word.length()){
+            while(boundry<word.length()&&!Character.isSpaceChar(c[boundry])){
+                boundry++;
+            }
+            right=boundry-1;
+            while (left<right){
+                char temp=c[left];
+                c[left]=c[right];
+                c[right]=temp;
+                left++;
+                right--;
+            }
+            boundry++;
+            left=boundry;
+        }
+        return String.valueOf(c);
+    }
+
 }
