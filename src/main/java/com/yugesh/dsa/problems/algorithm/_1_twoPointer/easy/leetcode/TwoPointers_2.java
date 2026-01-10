@@ -8,16 +8,16 @@ public class TwoPointers_2 {
 
     public static void main(String[] args) {
 
-        int[] moveZero = { 1, 2, 0, 3, 12 };
+        int[] moveZero = {1, 2, 0, 3, 12};
         System.out.println(Arrays.toString(moveZerosToEnd(moveZero)));
 
-        int[] removeElement = { 0, 1, 2, 2, 3, 0, 4, 2 };
+        int[] removeElement = {0, 1, 2, 2, 3, 0, 4, 2};
         System.out.println(removeElement(removeElement, 2));
 
-        int[] removeDuplicates = { 0, 0, 1, 1, 1, 2, 2, 3, 3, 4 };
+        int[] removeDuplicates = {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
         System.out.println(removeDuplicates(removeDuplicates));
 
-        int[] removeDuplicates2 = { 0, 0, 1, 1, 1, 1, 2, 3, 3 };
+        int[] removeDuplicates2 = {0, 0, 1, 1, 1, 1, 2, 3, 3};
         System.out.println(removeDuplicates_2(removeDuplicates2));
 
         String s = "ab#c", t = "ad#c";
@@ -32,19 +32,19 @@ public class TwoPointers_2 {
         String name = "alex", typed = "aaleex";
         System.out.println(longTypedName(name, typed));
 
-        int[] num5 = { 1, 2, 3, 0, 0, 0 };
-        int[] num6 = { 2, 5, 6 };
+        int[] num5 = {1, 2, 3, 0, 0, 0};
+        int[] num6 = {2, 5, 6};
         System.out.println(Arrays.toString(merge(num5, 3, num6, 3)));
 
-        int[] greedChildren = { 1, 2 };
-        int[] size = { 1, 2, 3 };
+        int[] greedChildren = {1, 2};
+        int[] size = {1, 2, 3};
         System.out.println(assignCookie(greedChildren, size));
 
         String ss = "axc", tt = "ahbgdc";
         System.out.println(isSubsequence(ss, tt));
 
-        int[] num8 = { 4, 9, 5 };
-        int[] num9 = { 9, 4, 9, 8, 4 };
+        int[] num8 = {4, 9, 5};
+        int[] num9 = {9, 4, 9, 8, 4};
         System.out.println(intersectionOfTwoArrays(num8, num9));
     }
 
@@ -56,7 +56,7 @@ public class TwoPointers_2 {
      * Given an integer array nums, move all 0s to the end of the array in-place,
      * while maintaining the relative order of the non-zero elements.
      * You must do this without making a copy of the array.
-     * 
+     *
      * @param a
      * @return
      */
@@ -88,7 +88,7 @@ public class TwoPointers_2 {
      * Return the number of elements not equal to val
      * The first k elements of nums should contain the result
      * Anything beyond k doesn’t matter
-     * 
+     *
      * @param a
      * @param element
      * @return
@@ -122,7 +122,7 @@ public class TwoPointers_2 {
      * Return the number of unique elements
      * The first k elements of nums should contain the final result
      * Anything beyond k does not matter
-     * 
+     *
      * @param a
      * @return
      */
@@ -154,7 +154,7 @@ public class TwoPointers_2 {
      * Return the number of elements after removal
      * First k elements of nums must contain the result
      * Anything beyond k does not matter
-     * 
+     *
      * @param a
      * @return
      */
@@ -184,9 +184,9 @@ public class TwoPointers_2 {
      * backspaces.
      * '#' means delete the previous character
      * Deleting when nothing exists does nothing
-     * 
-     * @param s1
-     * @param s2
+     *
+     * @param s
+     * @param t
      * @return
      */
     // need to learn after
@@ -251,7 +251,7 @@ public class TwoPointers_2 {
      * Spaces
      * Overall string structure
      * A word is a sequence of non-space characters.
-     * 
+     *
      * @param word
      * @return
      */
@@ -286,7 +286,7 @@ public class TwoPointers_2 {
      * deleting at most one character.
      * You may delete at most one character
      * String contains lowercase letters only
-     * 
+     *
      * @param s
      * @return
      */
@@ -328,7 +328,7 @@ public class TwoPointers_2 {
      * name (intended)
      * typed (what actually appeared)
      * Return true if typed could be a long-pressed version of name.
-     * 
+     *
      * @param name
      * @param typed
      * @return
@@ -361,7 +361,7 @@ public class TwoPointers_2 {
      * empty (0s)
      * nums2 of size n
      * Merge nums2 into nums1 in-place so that nums1 becomes a single sorted array.
-     * 
+     *
      * @param nums1
      * @param m
      * @param nums2
@@ -399,7 +399,7 @@ public class TwoPointers_2 {
      * Each child can get at most one cookie, and a cookie can satisfy a child only
      * if:
      * cookie size ≥ child greed
-     * 
+     *
      * @param g
      * @param s
      * @return
@@ -433,7 +433,7 @@ public class TwoPointers_2 {
      * You can delete characters from t
      * Without changing the relative order
      * Characters in s must appear in order inside t
-     * 
+     *
      * @param s
      * @param t
      * @return
@@ -462,7 +462,7 @@ public class TwoPointers_2 {
      * Rules:
      * Each element in the result must be unique
      * Order of result does not matter
-     * 
+     *
      * @param nums1
      * @param nums2
      * @return
@@ -502,7 +502,7 @@ public class TwoPointers_2 {
      * Each element in the result should appear as many times as it appears in both
      * arrays
      * Order of result does not matter
-     * 
+     *
      * @param nums1
      * @param nums2
      * @return
