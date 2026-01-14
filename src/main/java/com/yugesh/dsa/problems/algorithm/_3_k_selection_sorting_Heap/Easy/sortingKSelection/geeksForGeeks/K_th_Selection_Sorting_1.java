@@ -1,4 +1,4 @@
-package com.yugesh.dsa.problems.algorithm._3_k_selection_sorting_Heap.Easy.geeksForGeeks;
+package com.yugesh.dsa.problems.algorithm._3_k_selection_sorting_Heap.Easy.sortingKSelection.geeksForGeeks;
 
 import java.util.ArrayList;
 import java.util.Arrays;

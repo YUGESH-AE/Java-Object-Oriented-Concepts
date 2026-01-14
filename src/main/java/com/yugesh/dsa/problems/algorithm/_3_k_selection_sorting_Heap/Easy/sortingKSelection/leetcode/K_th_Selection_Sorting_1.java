@@ -1,4 +1,4 @@
-package com.yugesh.dsa.problems.algorithm._3_k_selection_sorting_Heap.Easy.leetcode;
+package com.yugesh.dsa.problems.algorithm._3_k_selection_sorting_Heap.Easy.sortingKSelection.leetcode;
 
 import java.util.Arrays;
 
