@@ -170,4 +170,33 @@ public class FrequencyMap_1 {
         }
         return list;
     }
+
+    /**
+     * 🧩 Counting Elements in Two Arrays
+     * (appears on multiple platforms in slightly different wording)
+     * 📌 Problem Statement (canonical form)
+     * You are given two integer arrays A and B.
+     * For each element in A, determine how many times it appears in B, and compute the total count.
+     * In other words:
+     * For every x in A, add frequency of x in B to the answer.
+     * @param a
+     * @param b
+     * @return
+     */
+    public static  int countingElementInArray(int[]a,int[]b){
+
+            Map<Integer,Integer> map =new HashMap<>();
+
+            for(int i:b){
+                map.put(i,map.getOrDefault(i,0)+1);
+            }
+            int count=0;
+            for(int i:a){
+                if(map.containsKey(i)){
+                    count+=map.get(i);
+                }
+            }
+            return count;
+
+    }
 }
