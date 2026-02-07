@@ -29,6 +29,8 @@ public class TwoPointers_1 {
      * Problem statement (no hints, no solution)
      * You are given a 1-indexed integer array numbers that is sorted in non-decreasing order,
      * and an integer target.
+     * Return the 1-based indices of the two numbers such that they add up to target.
+     * Exactly one solution exists.
      * @param a
      * @param target
      * @return

@@ -131,6 +131,7 @@ public class TwoPointers_2 {
             return 0;
         }
         int slow = 0;
+        int count=1;
         for (int fast = 1; fast < a.length; fast++) {
             if (a[slow] != a[fast]) {
                 slow++;
