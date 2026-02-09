@@ -133,4 +133,109 @@ public class TwoPointers_4 {
         return output;
     }
 
+     /**
+     * Assign Cookies
+     * You are given two integer arrays:
+     * g where g[i] is the greed factor of the i-th child
+     * s where s[j] is the size of the j-th cookie
+     * Each child can be content with at most one cookie, and each cookie can be given to at most one child.
+     *
+     * A child i will be content if they are given a cookie j such that:
+     * s[j] >= g[i]
+     * Input:  g = [1,2,3], s = [1,1]
+     * Output: 1
+     * Input:  g = [1,2], s = [1,2,3]
+     * Output: 2
+     * @param g
+     * @param s
+     * @return
+     */
+    public static int findContentChildren(int[] g, int[] s) {
+        Arrays.sort(g);
+        Arrays.sort(s);
+
+        int i = 0; // child pointer
+        int j = 0; // cookie pointer
+        int count = 0;
+
+        while (i < g.length && j < s.length) {
+            if (s[j] >= g[i]) {
+                count++;
+                i++;  // move to next child
+                j++;  // move to next cookie
+            } else {
+                j++;  // cookie too small, discard it
+            }
+        }
+
+        return count;
+    }
+
+    public static String reverseString(String s){
+        String[]w=s.split(" ");
+        StringBuilder sb=new StringBuilder();
+       for(int i=0;i<w.length;i++){
+           sb.append(reverse(w[i]));
+           if(i<w.length-1){
+               sb.append(" ");
+           }
+       }
+        return sb.toString();
+    }
+
+    public static String reverse(String s){
+        int i=0,j=s.length()-1;
+        char[]c=s.toCharArray();
+        while (i<j){
+            char temp=c[i];
+            c[i]=c[j];
+            c[j]=temp;
+            i++;
+            j--;
+        }
+        return new String(c);
+    }
+
+    /**
+     * Check If a String Is a Palindrome (alphanumeric)
+     * This is Valid Palindrome (LeetCode 125).
+     * Problem (very precise)
+     * Given a string s:
+     * Consider only alphanumeric characters
+     * letters: a–z, A–Z
+     * digits: 0–9
+     * Ignore case
+     * Check whether the resulting string is a palindrome
+     * @param s
+     * @return
+     */
+    public static boolean isPalindrome(String s) {
+        int left = 0;
+        int right = s.length() - 1;
+
+        while (left < right) {
+
+            // skip non-alphanumeric from left
+            while (left < right && !Character.isLetterOrDigit(s.charAt(left))) {
+                left++;
+            }
+
+            // skip non-alphanumeric from right
+            while (left < right && !Character.isLetterOrDigit(s.charAt(right))) {
+                right--;
+            }
+
+            // compare characters
+            if (Character.toLowerCase(s.charAt(left)) !=
+                    Character.toLowerCase(s.charAt(right))) {
+                return false;
+            }
+
+            left++;
+            right--;
+        }
+
+        return true;
+    }
+
 }
