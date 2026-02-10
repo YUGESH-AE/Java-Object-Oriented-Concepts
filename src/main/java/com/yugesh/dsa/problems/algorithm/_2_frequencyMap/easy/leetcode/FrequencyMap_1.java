@@ -234,35 +234,20 @@ public class FrequencyMap_1 {
      * @param stones
      * @return
      */
-//    public static int jewelsAndStones(String jewels, String stones){
-//        int value=0;
-//        if(stones.isEmpty()){
-//            return value;
-//        }
-//        Map<Character,Integer>map=new HashMap<>();
-//        for(Character s:stones.toCharArray()){
-//            map.put(s,map.getOrDefault(s,0)+1);
-//        }
-//        for(Character j:jewels.toCharArray()){
-//            if(map.containsKey(j)){
-//                value=value+map.get(j);
-//            }
-//        }
-//        return value;
-//    }
-    //simplest form
-    //Frequency Map pattern includes SET membership as its simplest form.
-    public static int jewelsAndStones(String jewels, String stones){
-        Set<Character>set=new HashSet<>();
-        for(Character s:stones.toCharArray()){
-            set.add(s);
-        }
-        int count=0;
-        for(Character j:jewels.toCharArray()){
-            if(set.contains(j)){
-                count++;
-            }
-        }
-        return count;
+    public static int jewelsAndStones(String jewels, String stones) {
+    Set<Character> jewelSet = new HashSet<>();
+
+    for (char c : jewels.toCharArray()) {
+        jewelSet.add(c);
     }
+
+    int count = 0;
+    for (char c : stones.toCharArray()) {
+        if (jewelSet.contains(c)) {
+            count++;
+        }
+    }
+    return count;
+}
+
 }
