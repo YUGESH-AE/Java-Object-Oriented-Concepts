@@ -117,7 +117,7 @@ public class FrequencyMap_2 {
     public static boolean wordPattern(String pattern, String word){
 
        String[]words=word.split(" ");
-       if(pattern.length()!=word.length()){
+       if(pattern.length()!=words.length){
            return false;
         }
        Map<Character,String>charToWord=new HashMap<>();
