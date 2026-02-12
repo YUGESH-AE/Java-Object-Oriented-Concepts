@@ -55,14 +55,16 @@ public class K_th_Selection_Sorting_1 {
      * @param a
      * @return
      */
-    public static int thirdMaximum(int[] a) {
+     public static int thirdMaximum(int[] a) {
         Integer max = null, secMax = null, thirdMax = null;
 
         for (int n : a) {
-            if (n == (max == null ? null : max) ||
-                    n == (secMax == null ? null : secMax) ||
-                    n == (thirdMax == null ? null : thirdMax)) {
-                continue; // skip duplicates
+            if (
+                    (max != null && n == max) ||
+                            (secMax != null && n == secMax) ||
+                            (thirdMax != null && n == thirdMax)
+            ) {
+                continue;
             }
 
             if (max == null || n > max) {
