@@ -1,6 +1,11 @@
 package com.yugesh.dsa.problems.algorithm._3_k_selection_sorting_Heap.Easy.sortingKSelection.leetcode;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+import java.util.PriorityQueue;
 
 public class SortedKSelection {
 
@@ -179,4 +184,56 @@ public class SortedKSelection {
         }
         return -1;
     }
+
+    /**
+     * 🟩 Problem
+     * Find the Kth Smallest Pair Distance
+     * (Easy-constraints variant)
+     * 🧩 What is being asked?
+     * You are given:
+     *
+     * An array nums[]
+     * An integer k
+     * For every pair (i, j) where i < j, compute:
+     * distance = |nums[i] - nums[j]|
+     * Now:
+     * Collect all pair distances
+     * Sort them
+     * Return the kth smallest distance
+     * @param num
+     * @param k
+     * @return
+     */
+    public static int kthSmallestPairDistance(int[]num,int k){
+
+        List<Integer>list=new ArrayList<>();
+
+        for(int i=0;i<num.length;i++){
+            for(int j=i+1;j<num.length;j++){
+                list.add(Math.abs(num[i]-num[j]));
+            }
+        }
+
+        Collections.sort(list);
+        return list.get(k-1);
+    }
+
+    public static int kthSmallestPairDistanceHeap(int[]num,int k){
+
+        PriorityQueue<Integer>pq=new PriorityQueue<>(
+                Comparator.reverseOrder()
+        );
+
+        for(int i=0;i<num.length;i++){
+            for(int j=i+1;j<num.length;j++){
+                pq.offer(Math.abs(num[i]-num[j]));
+
+                if(pq.size()>k){
+                    pq.poll();
+                }
+            }
+        }
+        return pq.peek();
+    }
+
 }
